@@ -1,4 +1,4 @@
-# machine_learning-sandbox
+# Machine Learning with Python and Scikit-Learn
 
 ## Requirements
 * Python + pip
