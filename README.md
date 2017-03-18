@@ -15,4 +15,5 @@ Linux:
 
 ## Usage
 ```$python classify_animal.py``` - simple pig or dog classification
+
 ```$python classify_access.py``` - page access evaluation related to buying(or not) your product
