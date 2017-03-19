@@ -26,8 +26,8 @@ hit_rate = 100.0 * total_hits / total_elements
 print (hit_rate)
 print (total_elements)
 
-“”””
+'''
 With the hit rate we can measure how good is our algorithm.
 If the hit rate is high, it predicted most cases right.
 If the hit rate is low, we must evaluate our tests
-“””
+'''
