@@ -1,6 +1,6 @@
-from data import load_page_access
+from data import load_accesses
 
-X, Y = load_page_access()
+X, Y = load_accesses()
 
 # Approach: To evaluate your model, train it with 90% of the input and test with the other 10%
 # Extracting first 90 elements for training

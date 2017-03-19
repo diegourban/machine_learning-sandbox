@@ -1,10 +1,10 @@
 import csv
 
-def load_page_access():
+def load_accesses():
     X = [] # data
     Y = [] # markings
 
-    csv_file = open('page_access_data.csv', 'rb')
+    csv_file = open('access.csv', 'rb')
     csv_reader = csv.reader(csv_file)
 
     csv_reader.next() # skipping the first line
@@ -15,3 +15,18 @@ def load_page_access():
         Y.append(int(bought))
 
     return X, Y
+
+def load_searches():
+    X = []
+    Y = []
+
+    csv_file = open('search.csv', 'rb')
+    csv_reader = csv.reader(csv_file)
+    csv_reader.next()
+
+    for home, busca, logado, comprou in csv_reader:
+        data = [int(home), busca, int(logado)]
+        X.append(data)
+        Y.append(int(comprou))
+
+    return X,Y  
