@@ -1,7 +1,7 @@
 # Machine Learning Sandbox with Python and Scikit-Learn
 
 ## Requirements
-* Python + pip
+* Python + Scikit-learn
 
 ## Installation
 Windows 32bits + Python 2.7:
