@@ -1,7 +1,7 @@
 # Machine Learning Sandbox with Python and Scikit-Learn
 
 ## Requirements
-* Python + Scikit-learn
+* Python + pip
 
 ## Installation
 Windows 32bits + Python 2.7:
@@ -12,7 +12,10 @@ Windows 32bits + Python 2.7:
 * Pandas (pip install pandas-0.19.2-cp27-cp27m-win32.whl)
 
 Linux:
-* TODO...
+* pip install numpy
+* pip install scipy
+* pip install scikit-learn
+
 
 ## Usage
 ```$python classify_animals.py``` - simple pig or dog classification
