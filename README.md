@@ -19,8 +19,12 @@ Linux:
 
 
 ## Usage
+Two categories classification:
 ```$python classify_animals.py``` - simple pig or dog classification
 
-```$python classify_accesses.py``` - page access evaluation related to buying(or not) your product
+```$python classify_accesses.py``` - client chance to buy based on page access
 
-```$python classify_searches.py``` - page search evaluation related to buying(or not) your product
+```$python classify_searches.py``` - client chance to buy based on page search
+
+Three categories classification:
+```$python classify_client_situations.py``` - client feeling based on page access
