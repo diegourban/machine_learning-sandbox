@@ -30,3 +30,5 @@ Two categories classification:
 Three categories classification:
 
 ```$python classify_client_situations.py``` - client feeling based on page access
+
+```$python classify_client_situations_kfold.py``` - client feeling based on page access, using kfold
