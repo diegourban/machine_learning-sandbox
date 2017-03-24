@@ -4,7 +4,7 @@ def load_accesses():
     X = [] # data
     Y = [] # markings
 
-    csv_file = open('access.csv', 'rb')
+    csv_file = open('data/access.csv', 'rb')
     csv_reader = csv.reader(csv_file)
 
     csv_reader.next() # skipping the first line
@@ -29,4 +29,4 @@ def load_searches():
         X.append(data)
         Y.append(int(comprou))
 
-    return X,Y  
+    return X,Y

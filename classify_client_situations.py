@@ -2,7 +2,7 @@ import pandas as pd
 from collections import Counter
 
 # Loading data frame
-data_frame = pd.read_csv('client_situation.csv')
+data_frame = pd.read_csv('data/client_situation.csv')
 
 X_df = data_frame[['recencia', 'frequencia', 'semanas_de_inscricao']]
 Y_df = data_frame['situacao']
