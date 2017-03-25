@@ -1,4 +1,4 @@
-from data import load_accesses
+from data_loader import load_accesses
 
 X, Y = load_accesses()
 
