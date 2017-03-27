@@ -7,7 +7,7 @@ import nltk
 # remember to download punkt: nltk.download('punkt')
 
 # Reading file
-classifications = pd.read_csv('data/email.csv', encoding = 'utf-8')
+classifications = pd.read_csv('../data/email.csv', encoding = 'utf-8')
 pure_emails = classifications['email']
 
 # Splitting information

@@ -2,7 +2,7 @@ import pandas as pd
 from collections import Counter
 
 # Loading data frame
-data_frame = pd.read_csv('data/search.csv')
+data_frame = pd.read_csv('../data/search.csv')
 
 X_df = data_frame[['home', 'busca', 'logado']]
 Y_df = data_frame['comprou']

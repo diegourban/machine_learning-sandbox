@@ -4,7 +4,7 @@ def load_accesses():
     X = [] # data
     Y = [] # markings
 
-    csv_file = open('data/access.csv', 'rb')
+    csv_file = open('../data/access.csv', 'rb')
     csv_reader = csv.reader(csv_file)
 
     csv_reader.next() # skipping the first line

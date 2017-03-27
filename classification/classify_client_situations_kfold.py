@@ -1,49 +1,34 @@
-#!-*- coding: utf8 -*-
 from collections import Counter
 from sklearn.cross_validation import cross_val_score
 import pandas as pd
 import numpy as np
 
-classifications = pd.read_csv('data/email.csv')
-emails = classifications['email']
-splitted = emails.str.lower().str.split(' ')
+# Loading data frame
+data_frame = pd.read_csv('../data/client_situation.csv')
 
-dictionary = set()
-for phrase in splitted:
-    dictionary.update(phrase)
+X_df = data_frame[['recencia', 'frequencia', 'semanas_de_inscricao']]
+Y_df = data_frame['situacao']
 
-total_words = len(dictionary)
-print total_words
+# Processing the dummies(transforming the column busca to binary category)
+Xdummies_df = pd.get_dummies(X_df).astype(int)
+Ydummies_df = Y_df
 
-tuples = zip(dictionary, xrange(total_words))
-translator = {word:index for word,index in tuples}
+X = Xdummies_df.values
+Y = Ydummies_df.values
 
-def vectorize_text(text, translator):
-    vector = [0] * len(translator)
-
-    for word in text:
-        if word in translator:
-            position = translator[word]
-            vector[position] += 1
-
-    return vector
-
-text_vectors = [vectorize_text(text, translator) for text in splitted]
-markings = classifications['classificacao']
-
-X = np.array(text_vectors)
-Y = np.array(markings.tolist())
-
+# Separating training, test and validation data
 training_percentage = 0.8
 
 training_size = int(training_percentage * len(Y))
-validation_zie = len(Y) - training_size
 
 training_data = X[0:training_size]
 training_markings = Y[0:training_size]
 
 validation_data = X[training_size:]
 validation_markings = Y[training_size:]
+
+print ("Total training and test elements: %d" % len(training_data))
+print ("Total validation elements: %d" % len(validation_data))
 
 def fit_and_predict(name, model, training_data, training_markings):
     k = 10
