@@ -1,4 +1,4 @@
-# Machine Learning Sandbox with Python and Scikit-Learn
+# Machine Learning Classification with Python and Scikit-Learn
 
 About the input data: It is common to order the data in chronological order.
 Train an test the first 80% of it and validate with the 20% remaining.
