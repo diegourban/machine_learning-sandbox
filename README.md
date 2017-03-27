@@ -1,5 +1,5 @@
 # Machine Learning Sandbox
 
-Classification with Python + Scikit-Learn
+![Classification with Python + Scikit-Learn](./classification)
 
 Recommendation with Java + Mahout
