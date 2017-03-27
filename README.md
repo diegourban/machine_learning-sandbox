@@ -2,4 +2,4 @@
 
 [Classification with Python + Scikit-Learn](./classification)
 
-Recommendation with Java + Mahout
+[Recommendation with Java + Mahout](./recommendation)
