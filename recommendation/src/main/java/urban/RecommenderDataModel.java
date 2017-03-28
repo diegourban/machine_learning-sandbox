@@ -28,8 +28,25 @@ public class RecommenderDataModel {
         return getDataModel("courses.csv");
     }
 
+    /**
+     * User id, Course id, Grade
+     * + some other questions to understand better the users:
+     *
+     * 1000 = want to receive newsletter about course X
+     * 1001 = want to receive newsletter about course Y
+     * 1002 = want to receive newsletter about course Z
+     *
+     * between 0(no) and 1(yes)
+     *
+     * @return
+     * @throws IOException
+     */
+    public DataModel getCoursesModel2() throws IOException {
+        return getDataModel("courses2.csv");
+    }
+
     private DataModel getDataModel(String pathname) throws IOException {
-        File dataFile = new File(pathname);
+        File dataFile = new File("src/main/resources/" + pathname);
         return new FileDataModel(dataFile);
     }
 }
