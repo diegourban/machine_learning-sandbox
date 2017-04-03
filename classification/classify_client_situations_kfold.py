@@ -6,10 +6,14 @@ import numpy as np
 # Loading data frame
 data_frame = pd.read_csv('../data/client_situation.csv')
 
+# Recencia: Visitou a X dias atras.
+# Frequencia: Visitou X dias.
+# Semanas de inscricao: X semanas atras.
+# Situacao: 0(Chateado), 1(Neutro), 2(Alegre)
 X_df = data_frame[['recencia', 'frequencia', 'semanas_de_inscricao']]
 Y_df = data_frame['situacao']
 
-# Processing the dummies(transforming the column busca to binary category)
+# Processing the dummies(transforming the column situacao to binary category)
 Xdummies_df = pd.get_dummies(X_df).astype(int)
 Ydummies_df = Y_df
 
